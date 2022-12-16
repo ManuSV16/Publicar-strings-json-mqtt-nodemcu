@@ -17,8 +17,8 @@
 #include <PubSubClient.h> //Biblioteca para conexion MQTT
 
 //Datos de WiFi
-const char* ssid = "nombre-ssid";  // Aquí debes poner el nombre de tu red
-const char* password = "contraseña";  // Aquí debes poner la contraseña de tu red
+const char* ssid = "Arknet16_2.4Gnormal";  // Aquí debes poner el nombre de tu red
+const char* password = "96luam21";  // Aquí debes poner la contraseña de tu red
 
 //Datos del broker MQTT
 const char* mqtt_server = "192.168.1.1"; // Si estas en una red local, coloca la IP asignada, en caso contrario, coloca la IP publica
@@ -92,7 +92,7 @@ void loop() {
     timeLast = timeNow; // Actualización de seguimiento de tiempo
 
     //Se construye el string correspondiente al JSON que contiene 3 variables
-    String json = "{\"id\":\"Hugo\",\"temp\":"+String(random(18, 23))+",\"hum\":"+String(random (38,52))+"}";
+    String json = "{\"id\":\"Manuel\",\"temp\":"+String(random(18, 23))+",\"hum\":"+String(random (38,52))+"}";
     Serial.println(json); // Se imprime en monitor solo para poder visualizar que el string esta correctamente creado
     int str_len = json.length() + 1;//Se calcula la longitud del string
     char char_array[str_len];//Se crea un arreglo de caracteres de dicha longitud
